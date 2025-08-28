@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Marcos Gelio — Currículo</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sheet">
+      <header>
+        <div class="title">
+          <h1>Marcos Gelio Silva Chiecchi</h1>
+          <p class="role">Desenvolvedor back-end PHP</p>
+        </div>
+        <div class="actions">
+          <button class="btn" onclick="toggleTheme()" title="Alternar tema">Tema</button>
+          <button class="btn btn-accent" onclick="window.print()" title="Imprimir ou salvar em PDF">Salvar em PDF</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <aside>
+          <div class="card">
+            <h3>Contato</h3>
+            <ul class="contact" style="list-style: none; padding: 0; margin: 0;">
+              <li><span>📍</span> <span>Fernadopolis/SP, Brasil</span></li>
+              <li><span>📧</span> <span>Marcosgelio27@gmail.com</a></span></li>
+              <li><span>📱</span> <span>+55 (34) 99727-0968</a></span></li>
+              <li><span>💻</span> <span><a href="https://github.com/Marcosgelio27" target="_blank" rel="noreferrer noopener">github.com/Marcosgelio27</a></span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Competências</h3>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">PHP</span>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Idiomas</h3>
+            <ul style="margin: 0; padding-left: 18px;">
+              <li>Português — Nativo</li>
+              <li>Inglês — Intermediário (B1)</li>
+            </ul>
+          </div>
+        </aside>
+
+        <main>
+          <section>
+            <h2>Resumo</h2>
+            <p class="summary">Aprendiz de programação com 9 meses de experiência em desenvolvimento de sites PHP, focado no Back-end. Busco oportunidade para aprender mais sobre programação com foco em desenvolvimento de sistemas.</p>
+          </section>
+
+          <section>
+            <h2>Experiência</h2>
+            <div class="exp-item">
+              <div>
+                <div class="exp-role">Aprendiz — Hypersoft</div>
+                <div class="exp-meta">Iturama/MG • 12/2024 – 06/2025</div>
+                <ul class="exp-bullets">
+                  <li>participação de um projeto de geração de arquivo CNAB para automatizacão de pagamentos e cobranças.</li>
+                </ul>
+              </div>
+              <div class="exp-meta">Presencial</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Projetos Relevantes</h2>
+            <div class="proj-grid">
+              <div class="row">
+                <strong>Projeto para Mercado</strong>
+                <span class="meta">Um projeto desenvolvido em um desafio de "imitar" um sistema de mercado da região</span>
+                <span class="meta"><a href="https://github.com/Marcosgelio27/Project_mercado.git" target="_blank" rel="noreferrer noopener">link github</a></span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Informações Adicionais</h2>
+            <ul style="margin: 0; padding-left: 18px;">
+              <li>Medalhista de bronze nacional OBMEP</li>
+              <li>Medalhista de prata regional OBMEP</li>
+              <li>Medalhista de bronze OBA</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <span>Atualizado em 28/08/2025</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const dark = document.documentElement.dataset.theme === 'dark';
+      if (dark) {
+        document.documentElement.dataset.theme = '';
+        setLight();
+      } else {
+        document.documentElement.dataset.theme = 'dark';
+        setDark();
+      }
+    }
+    function setDark() {
+      document.documentElement.style.setProperty('--bg', '#0b1220');
+      document.documentElement.style.setProperty('--card', '#0f172a');
+      document.documentElement.style.setProperty('--text', '#e5e7eb');
+      document.documentElement.style.setProperty('--muted', '#9ca3af');
+      document.documentElement.style.setProperty('--accent', '#60a5fa');
+      document.documentElement.style.setProperty('--chip', '#1f2a44');
+      document.documentElement.style.setProperty('--border', '#1f2937');
+    }
+    function setLight() {
+      document.documentElement.style.setProperty('--bg', '#f7f7fb');
+      document.documentElement.style.setProperty('--card', '#ffffff');
+      document.documentElement.style.setProperty('--text', '#1f2937');
+      document.documentElement.style.setProperty('--muted', '#6b7280');
+      document.documentElement.style.setProperty('--accent', '#2563eb');
+      document.documentElement.style.setProperty('--chip', '#eef2ff');
+      document.documentElement.style.setProperty('--border', '#e5e7eb');
+    }
+  </script>
+</body>
+</html>
